@@ -1,76 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+# Snapchat Static Web Page
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapchat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Snapchat</h1>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <modelVersion>4.0.0</modelVersion>
+    <section id="features">
+        <h2>Features</h2>
+        <p>Snapchat offers a variety of features including Stories, Filters, and Lenses.</p>
+    </section>
     
-    <groupId>com.snapchat</groupId>
-    <artifactId>snapchat-static-webapp</artifactId>
-    <version>1.0.0</version>
-    <packaging>war</packaging>
+    <section id="download">
+        <h2>Download the App</h2>
+        <p>Get Snapchat on your mobile device from the App Store or Google Play.</p>
+    </section>
     
-    <name>Snapchat Static Web Page</name>
-    <description>A static web page for Snapchat</description>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us!</p>
+    </section>
     
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-    </properties>
-    
-    <build>
-        <finalName>snapchat-webapp</finalName>
-        <plugins>
-            <!-- Maven Compiler Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
-                <configuration>
-                    <source>17</source>
-                    <target>17</target>
-                </configuration>
-            </plugin>
-            
-            <!-- Maven WAR Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.4.0</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                    <webResources>
-                        <resource>
-                            <directory>src/main/webapp</directory>
-                            <filtering>true</filtering>
-                        </resource>
-                    </webResources>
-                </configuration>
-            </plugin>
-            
-            <!-- Maven Clean Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-clean-plugin</artifactId>
-                <version>3.3.1</version>
-            </plugin>
-            
-            <!-- Maven Resources Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.3.1</version>
-            </plugin>
-        </plugins>
-    </build>
-    
-    <!-- For static web projects, we typically don't need dependencies -->
-    <!-- But if you need to add any in the future, you can add them here -->
-    <dependencies>
-        <!-- No dependencies required for static HTML/CSS project -->
-        <!-- This section can be left empty or removed -->
-    </dependencies>
-</project>
+    <footer>
+        <p>&copy; 2023 Snapchat, Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>
