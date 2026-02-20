@@ -1,42 +1,32 @@
-# Snapchat Static Web Page
+# Snapchat Static Page
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snapchat</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to Snapchat</h1>
-        <nav>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#download">Download</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="features">
-        <h2>Features</h2>
-        <p>Snapchat offers a variety of features including Stories, Filters, and Lenses.</p>
-    </section>
-    
-    <section id="download">
-        <h2>Download the App</h2>
-        <p>Get Snapchat on your mobile device from the App Store or Google Play.</p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, feel free to reach out to us!</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2023 Snapchat, Inc. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+import javax.swing.*;
+import java.awt.*;
+
+public class SnapchatStaticPage {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Snapchat Static Page");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 600);
+        
+        JPanel panel = new JPanel();
+        panel.setLayout(new BorderLayout());
+        
+        JLabel titleLabel = new JLabel("Snapchat", SwingConstants.CENTER);
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 30));
+        panel.add(titleLabel, BorderLayout.NORTH);
+        
+        JTextArea descriptionArea = new JTextArea("Welcome to Snapchat! Share your moments with friends.");
+        descriptionArea.setFont(new Font("Arial", Font.PLAIN, 16));
+        descriptionArea.setLineWrap(true);
+        descriptionArea.setWrapStyleWord(true);
+        descriptionArea.setEditable(false);
+        panel.add(descriptionArea, BorderLayout.CENTER);
+        
+        JButton loginButton = new JButton("Login");
+        panel.add(loginButton, BorderLayout.SOUTH);
+        
+        frame.add(panel);
+        frame.setVisible(true);
+    }
+}
